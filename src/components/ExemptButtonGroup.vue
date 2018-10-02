@@ -1,26 +1,29 @@
 <template>
 	<div class="exempt-button-group">
-		<d2l-button
+		<d2l-stcl-button
+			class="d2l-button"
 			v-if="showLoadMore"
 			:aria-label="$t('ariaLoadMore')"
 			:disabled="isLoading"
 			@click.native="loadMore">
 			{{ $t('btnLoadMore') }}
-		</d2l-button>
+		</d2l-stcl-button>
 
-		<d2l-button primary
+		<d2l-stcl-button primary
+			class="d2l-button"
 			v-if="showExempt"
 			:aria-label="$t('ariaExempt')"
 			@click.native="setExempt">
 			{{ $t('btnExempt') }}
-		</d2l-button>
+		</d2l-stcl-button>
 
-		<d2l-button
+		<d2l-stcl-button
+			class="d2l-button"
 			v-if="showExempt"
 			:aria-label="$t('ariaUnexempt')"
 			@click.native="setUnexempt">
 			{{ $t('btnUnexempt') }}
-		</d2l-button>
+		</d2l-stcl-button>
 	</div>
 </template>
 

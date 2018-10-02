@@ -6,8 +6,12 @@ import App from 'App.vue'
 import {createStore} from 'store/index'
 import * as types from 'store/mutation-types'
 import {i18n} from 'i18n'
+import { defineCustomElements } from '@d2l/brightspace-ui-stencil';
 
 Vue.config.performance = process.env.NODE_ENV !== "production"
+Vue.config.ignoredElements = ['d2l-stcl-button']
+
+defineCustomElements(window);
 
 function loadVue(
 	id,
